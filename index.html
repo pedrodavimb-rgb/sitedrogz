@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-54f4c02e-538e-4a56-af68-6e018f080010/styles.css">
+<script src="_ds/modernist-54f4c02e-538e-4a56-af68-6e018f080010/_ds_bundle.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; }
+  a { color: var(--color-accent); }
+  a:hover { color: var(--color-accent-600); }
+  summary { list-style: none; cursor: pointer; }
+  summary::-webkit-details-marker { display: none; }
+  details[open] .faq-plus { transform: rotate(45deg); }
+</style>
+</helmet>
+
+<div style="background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); overflow-x: hidden;">
+
+  <header style="position: sticky; top: 0; z-index: 20; background: var(--color-bg); border-bottom: 2px solid var(--color-divider);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: 12px clamp(18px,5vw,48px); display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+      <img src="assets/logo-quality.png" alt="Quality Produções — 30 anos" style="height: clamp(28px,6.5vw,40px); width: auto;">
+      <a href="{{ waLink }}" target="_blank" rel="noopener" class="btn btn-primary" style="min-height: 44px; padding: 12px 18px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;">Orçamento</a>
+    </div>
+  </header>
+
+  <section data-screen-label="Hero" style="position: relative; background: #16110f; color: #f8f4f4; overflow: hidden;">
+    <div style="position: absolute; inset: 0;">
+      <img src="assets/estande-01.png" alt="" class="grayscale" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22,17,15,0.92) 0%, rgba(22,17,15,0.72) 45%, rgba(22,17,15,0.95) 100%);"></div>
+    </div>
+    <div style="position: relative; max-width: 1160px; margin: 0 auto; padding: clamp(40px,9vw,96px) clamp(18px,5vw,48px) clamp(36px,7vw,80px); display: flex; flex-direction: column; gap: clamp(20px,4vw,32px); align-items: flex-start;">
+      <div style="display: flex; align-items: center; gap: 12px; font-size: 12px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: #ff9783;">
+        <span style="width: 40px; height: 2px; background: var(--color-accent); display: block;"></span>
+        <span>30 anos · Estandes e cenografia</span>
+      </div>
+      <h1 style="margin: 0; font-size: clamp(38px,9.5vw,86px); line-height: 0.98; letter-spacing: -0.03em; max-width: 15ch; text-wrap: balance;">{{ headline }}</h1>
+      <p style="margin: 0; font-size: clamp(17px,4.4vw,23px); line-height: 1.45; max-width: 46ch; color: #d7d3d3; text-wrap: pretty;">Estandes e cenografia sob medida, entregues no prazo contratado, para empresas que não aceitam passar despercebidas na próxima feira.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-start; width: 100%; max-width: 420px;">
+        <a href="{{ waLink }}" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; min-height: 60px; padding: 18px 22px; font-size: clamp(15px,4vw,18px); letter-spacing: 0.02em; justify-content: space-between; gap: 16px;">
+          <span>{{ ctaLabel }}</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+        </a>
+        <span style="font-size: 13px; letter-spacing: 0.04em; color: #bab6b6;">{{ ctaMicro }}</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #201e1d; color: #f8f4f4; border-top: 2px solid var(--color-accent);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(24px,5vw,40px) clamp(18px,5vw,48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: clamp(20px,4vw,32px);">
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <span style="font-family: var(--font-heading); font-weight: 800; font-size: clamp(34px,8vw,52px); line-height: 1; letter-spacing: -0.03em;">30</span>
+        <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #9b9797;">Anos de mercado</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <span style="font-family: var(--font-heading); font-weight: 800; font-size: clamp(34px,8vw,52px); line-height: 1; letter-spacing: -0.03em;">+5.000</span>
+        <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #9b9797;">Estandes entregues</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <span style="font-family: var(--font-heading); font-weight: 800; font-size: clamp(34px,8vw,52px); line-height: 1; letter-spacing: -0.03em;">+300</span>
+        <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #9b9797;">Empresas atendidas</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px;">
+        <span style="font-family: var(--font-heading); font-weight: 800; font-size: clamp(34px,8vw,52px); line-height: 1; letter-spacing: -0.03em;">+20</span>
+        <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #9b9797;">Empresas filhas</span>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Abertura" style="max-width: 1160px; margin: 0 auto; padding: clamp(56px,10vw,120px) clamp(18px,5vw,48px);">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(28px,5vw,64px);">
+      <div>
+        <h2 style="margin: 0 0 24px; font-size: clamp(26px,6.5vw,44px); line-height: 1.05; letter-spacing: -0.025em; max-width: 20ch;">Você não precisa entender de montagem. Só de imagem.</h2>
+        <span style="display: block; width: 72px; height: 2px; background: var(--color-accent);"></span>
+      </div>
+      <div style="font-size: clamp(16px,4.2vw,18px); line-height: 1.6; max-width: 60ch;">
+        <p>Sua empresa investiu pesado pra estar nessa feira. Passagem, hospedagem, equipe, amostras, dias inteiros de agenda.</p>
+        <p>Só que na hora H, o estande entrega uma imagem de empresa pequena — genérica, igual a dez outros no mesmo corredor. E o pior cenário: um imprevisto de montagem no dia do evento, com tudo já pago e sem tempo de resolver.</p>
+        <p>A Quality Produções existe pra eliminar essa dor. Há 30 anos, transformamos o espaço que sua marca ocupa numa experiência que representa o tamanho real do seu negócio — com infraestrutura própria e prazo garantido em contrato.</p>
+        <p style="margin: 0; font-weight: 600;">Você não precisa entender de metalúrgica, iluminação cênica ou logística de montagem. Você só precisa dizer que imagem quer passar. O resto é com a gente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Dor" style="border-top: 2px solid var(--color-divider); border-bottom: 2px solid var(--color-divider); background: var(--color-surface);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px,10vw,120px) clamp(18px,5vw,48px);">
+      <h6 style="margin: 0 0 16px; color: var(--color-accent-700);">Identificação</h6>
+      <h2 style="margin: 0 0 clamp(28px,5vw,48px); font-size: clamp(24px,5.6vw,38px); line-height: 1.15; letter-spacing: -0.02em; max-width: 34ch;">Se você já participou de uma feira ou evento corporativo, provavelmente já sentiu pelo menos uma dessas situações:</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 0; border-top: 2px solid var(--color-divider);">
+        <div style="display: flex; gap: 16px; padding: clamp(18px,4vw,26px) 0; border-bottom: 2px solid var(--color-divider);">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 14px; color: var(--color-accent); flex: none; padding-top: 3px;">01</span>
+          <p style="margin: 0; font-size: clamp(15px,4vw,17px); line-height: 1.5;">Você já se pegou olhando pro estande do concorrente ao lado e pensando "o nosso deveria estar parecendo isso"?</p>
+        </div>
+        <div style="display: flex; gap: 16px; padding: clamp(18px,4vw,26px) 0; border-bottom: 2px solid var(--color-divider);">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 14px; color: var(--color-accent); flex: none; padding-top: 3px;">02</span>
+          <p style="margin: 0; font-size: clamp(15px,4vw,17px); line-height: 1.5;">Já teve aquela sensação de que o orçamento que te passaram não tinha nada a ver com o que você imaginou?</p>
+        </div>
+        <div style="display: flex; gap: 16px; padding: clamp(18px,4vw,26px) 0; border-bottom: 2px solid var(--color-divider);">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 14px; color: var(--color-accent); flex: none; padding-top: 3px;">03</span>
+          <p style="margin: 0; font-size: clamp(15px,4vw,17px); line-height: 1.5;">Já viveu (ou teve pesadelo com) a história de montador que atrasa e entrega tudo em cima da hora do evento abrir?</p>
+        </div>
+        <div style="display: flex; gap: 16px; padding: clamp(18px,4vw,26px) 0; border-bottom: 2px solid var(--color-divider);">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 14px; color: var(--color-accent); flex: none; padding-top: 3px;">04</span>
+          <p style="margin: 0; font-size: clamp(15px,4vw,17px); line-height: 1.5;">Já ficou na dúvida se valia mais a pena um estande "pronto" ou gastar mais num personalizado — sem ninguém explicar a diferença de forma clara?</p>
+        </div>
+        <div style="display: flex; gap: 16px; padding: clamp(18px,4vw,26px) 0; border-bottom: 2px solid var(--color-divider);">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 14px; color: var(--color-accent); flex: none; padding-top: 3px;">05</span>
+          <p style="margin: 0; font-size: clamp(15px,4vw,17px); line-height: 1.5;">Já pesquisou uma produtora antes de fechar e não achou quase nada sobre ela online, e isso te deixou inseguro pra assinar o contrato?</p>
+        </div>
+        <div style="display: flex; gap: 16px; padding: clamp(18px,4vw,26px) 0; border-bottom: 2px solid var(--color-divider);">
+          <span style="font-family: var(--font-heading); font-weight: 800; font-size: 14px; color: var(--color-accent); flex: none; padding-top: 3px;">06</span>
+          <p style="margin: 0; font-size: clamp(15px,4vw,17px); line-height: 1.5;">Todo dia a mesma frustração de sentir que sua empresa é maior do que a imagem que ela passa nos eventos que participa?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Solução" style="max-width: 1160px; margin: 0 auto; padding: clamp(56px,10vw,120px) clamp(18px,5vw,48px);">
+    <h6 style="margin: 0 0 16px; color: var(--color-accent-700);">A solução</h6>
+    <h2 style="margin: 0 0 clamp(28px,5vw,52px); font-size: clamp(26px,6.5vw,44px); line-height: 1.05; letter-spacing: -0.025em; max-width: 28ch;">A Quality Produções trabalha com dois modelos, dependendo do seu momento e objetivo:</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(28px,4vw,48px); margin-bottom: clamp(32px,5vw,56px);">
+      <article style="border-top: 2px solid var(--color-text); padding-top: 20px; display: flex; flex-direction: column; gap: 16px;">
+        <h3 style="margin: 0; font-size: clamp(21px,5vw,27px); letter-spacing: -0.02em;">Estandes pré-prontos</h3>
+        <div class="grayscale" style="aspect-ratio: 4 / 3; overflow: hidden;">
+          <img src="assets/estande-04.png" alt="Estande pré-pronto montado em feira" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <p style="margin: 0; font-size: clamp(15px,4vw,17px); line-height: 1.55;">Estrutura testada, ágil, ideal pra quem precisa de agilidade e previsibilidade de custo.</p>
+      </article>
+      <article style="border-top: 2px solid var(--color-accent); padding-top: 20px; display: flex; flex-direction: column; gap: 16px;">
+        <h3 style="margin: 0; font-size: clamp(21px,5vw,27px); letter-spacing: -0.02em;">Estandes personalizados</h3>
+        <div class="grayscale" style="aspect-ratio: 4 / 3; overflow: hidden;">
+          <img src="assets/estande-03.png" alt="Estande personalizado com cenografia sob medida" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <p style="margin: 0; font-size: clamp(15px,4vw,17px); line-height: 1.55;">Projeto e cenografia desenhados do zero pra sua marca, com o nível de "imponência" que representa o tamanho real da sua empresa.</p>
+      </article>
+    </div>
+    <p style="margin: 0; max-width: 68ch; font-size: clamp(16px,4.2vw,18px); line-height: 1.6; border-left: 2px solid var(--color-accent); padding-left: 20px;">Nosso mecanismo é simples: você não chega sabendo o nome técnico de nada — chega sabendo a imagem que quer passar. Nossa equipe de arquitetos e designers traduz isso em projeto, e nossa infraestrutura própria (sem depender de terceirizar montagem, luz e som) executa com prazo em contrato, não em promessa verbal.</p>
+  </section>
+
+  <section data-screen-label="Benefícios" style="background: #201e1d; color: #f8f4f4;">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px,10vw,120px) clamp(18px,5vw,48px);">
+      <h6 style="margin: 0 0 16px; color: #ff9783;">O que você ganha</h6>
+      <h2 style="margin: 0 0 clamp(32px,5vw,56px); font-size: clamp(26px,6.5vw,44px); line-height: 1.05; letter-spacing: -0.025em; max-width: 24ch;">Sete motivos para fechar com a Quality</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(24px,4vw,40px);">
+        <div style="display: flex; flex-direction: column; gap: 12px; border-top: 2px solid rgba(248,244,244,0.24); padding-top: 18px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff563c" stroke-width="1.8" stroke-linecap="square"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"></path></svg>
+          <h4 style="margin: 0; font-size: clamp(18px,4.6vw,21px);">Infraestrutura própria</h4>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #d7d3d3;">Você não depende de três fornecedores diferentes torcendo pra tudo chegar a tempo — é uma equipe só, do projeto à desmontagem.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; border-top: 2px solid rgba(248,244,244,0.24); padding-top: 18px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff563c" stroke-width="1.8" stroke-linecap="square"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l4 2"></path></svg>
+          <h4 style="margin: 0; font-size: clamp(18px,4.6vw,21px);">30 anos de mercado</h4>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #d7d3d3;">Você fecha com quem já resolveu praticamente todo tipo de imprevisto de feira, então o seu não vai ser o primeiro.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; border-top: 2px solid rgba(248,244,244,0.24); padding-top: 18px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff563c" stroke-width="1.8" stroke-linecap="square"><path d="M5 3h9l5 5v13H5z"></path><path d="M9 13l2 2 4-4"></path></svg>
+          <h4 style="margin: 0; font-size: clamp(18px,4.6vw,21px);">Contrato com prazo garantido</h4>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #d7d3d3;">Você não fica refém de "promessa verbal" — se atrasar a entrega por nossa parte, o contrato já prevê desconto.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; border-top: 2px solid rgba(248,244,244,0.24); padding-top: 18px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff563c" stroke-width="1.8" stroke-linecap="square"><path d="M4 4h16v12H8l-4 4z"></path></svg>
+          <h4 style="margin: 0; font-size: clamp(18px,4.6vw,21px);">Atendimento consultivo desde o briefing</h4>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #d7d3d3;">Você não precisa chegar com projeto técnico pronto, só precisa saber que impressão quer causar.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; border-top: 2px solid rgba(248,244,244,0.24); padding-top: 18px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff563c" stroke-width="1.8" stroke-linecap="square"><path d="M3 4h8v8H3zM13 4h8v5h-8zM13 13h8v7h-8zM3 16h8v4H3z"></path></svg>
+          <h4 style="margin: 0; font-size: clamp(18px,4.6vw,21px);">Modelo pré-pronto ou personalizado</h4>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #d7d3d3;">Você escolhe o nível de investimento certo pro seu momento, sem pagar por complexidade que não precisa.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; border-top: 2px solid rgba(248,244,244,0.24); padding-top: 18px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff563c" stroke-width="1.8" stroke-linecap="square"><path d="M2 6h20v12H2zM2 10h20"></path><path d="M6 14h4"></path></svg>
+          <h4 style="margin: 0; font-size: clamp(18px,4.6vw,21px);">Pagamento parcelado</h4>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #d7d3d3;">Você organiza o caixa da empresa sem comprometer todo o orçamento de uma vez só.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px; border-top: 2px solid rgba(248,244,244,0.24); padding-top: 18px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff563c" stroke-width="1.8" stroke-linecap="square"><path d="M3 20l4-16 5 5 5-5 4 16z"></path><path d="M8 20h8"></path></svg>
+          <h4 style="margin: 0; font-size: clamp(18px,4.6vw,21px);">Equipe de arquitetos e designers dedicada</h4>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #d7d3d3;">Sua marca não fica com "mais um estande genérico", fica com um projeto pensado pra ela.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Prova social" style="max-width: 1160px; margin: 0 auto; padding: clamp(56px,10vw,120px) clamp(18px,5vw,48px);">
+    <h6 style="margin: 0 0 16px; color: var(--color-accent-700);">Prova social</h6>
+    <h2 style="margin: 0 0 clamp(24px,4vw,40px); font-size: clamp(26px,6.5vw,44px); line-height: 1.05; letter-spacing: -0.025em; max-width: 24ch;">30 anos de mercado, infraestrutura própria, estandes entregues em feiras por todo o Brasil</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 2px; background: var(--color-divider); border: 2px solid var(--color-divider); margin-bottom: clamp(40px,6vw,72px);">
+      <figure class="grayscale" style="margin: 0; aspect-ratio: 16 / 11; overflow: hidden; background: var(--color-bg);">
+        <img src="assets/estande-02.jpg" alt="Estande montado em feira corporativa" style="width: 100%; height: 100%; object-fit: cover;">
+      </figure>
+      <figure class="grayscale" style="margin: 0; aspect-ratio: 16 / 11; overflow: hidden; background: var(--color-bg);">
+        <img src="assets/estande-05.png" alt="Estande com cenografia iluminada" style="width: 100%; height: 100%; object-fit: cover;">
+      </figure>
+      <figure class="grayscale" style="margin: 0; aspect-ratio: 16 / 11; overflow: hidden; background: var(--color-bg);">
+        <img src="assets/render-3d.jpg" alt="Projeto 3D do estande antes da montagem" style="width: 100%; height: 100%; object-fit: cover;">
+      </figure>
+      <figure class="grayscale" style="margin: 0; aspect-ratio: 16 / 11; overflow: hidden; background: var(--color-bg);">
+        <img src="assets/montagem.png" alt="Equipe própria durante a montagem" style="width: 100%; height: 100%; object-fit: cover;">
+      </figure>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(20px,3vw,32px); margin-bottom: clamp(40px,6vw,72px);">
+      <blockquote style="margin: 0; border: 2px solid var(--color-divider); padding: clamp(20px,4vw,28px); display: flex; flex-direction: column; gap: 18px;">
+        <p style="margin: 0; font-size: 16px; line-height: 1.55; color: var(--color-neutral-700);">[INSERIR DEPOIMENTO 1 — cliente corporativo, foco em resultado quantitativo: aumento de fluxo no estande, fechamento de negócios na feira, elogios recebidos]</p>
+        <footer style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+          <span style="width: 48px; height: 48px; flex: none; background: var(--color-neutral-300); display: grid; place-items: center; font-size: 10px; font-weight: 800; letter-spacing: 0.08em; color: var(--color-neutral-700); text-align: center;">FOTO</span>
+          <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-neutral-700);">Nome · Empresa</span>
+        </footer>
+      </blockquote>
+      <blockquote style="margin: 0; border: 2px solid var(--color-divider); padding: clamp(20px,4vw,28px); display: flex; flex-direction: column; gap: 18px;">
+        <p style="margin: 0; font-size: 16px; line-height: 1.55; color: var(--color-neutral-700);">[INSERIR DEPOIMENTO 2 — foco em tranquilidade operacional: prazo cumprido, zero imprevisto no dia do evento]</p>
+        <footer style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+          <span style="width: 48px; height: 48px; flex: none; background: var(--color-neutral-300); display: grid; place-items: center; font-size: 10px; font-weight: 800; letter-spacing: 0.08em; color: var(--color-neutral-700); text-align: center;">FOTO</span>
+          <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-neutral-700);">Nome · Empresa</span>
+        </footer>
+      </blockquote>
+      <blockquote style="margin: 0; border: 2px solid var(--color-divider); padding: clamp(20px,4vw,28px); display: flex; flex-direction: column; gap: 18px;">
+        <p style="margin: 0; font-size: 16px; line-height: 1.55; color: var(--color-neutral-700);">[INSERIR DEPOIMENTO 3 — foco em transformação de imagem: "não parecíamos a mesma empresa"]</p>
+        <footer style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+          <span style="width: 48px; height: 48px; flex: none; background: var(--color-neutral-300); display: grid; place-items: center; font-size: 10px; font-weight: 800; letter-spacing: 0.08em; color: var(--color-neutral-700); text-align: center;">FOTO</span>
+          <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-neutral-700);">Nome · Empresa</span>
+        </footer>
+      </blockquote>
+    </div>
+
+    <h6 style="margin: 0 0 16px; color: var(--color-neutral-700);">Marcas atendidas</h6>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 2px; background: var(--color-divider); border: 2px solid var(--color-divider);">
+      <div style="background: var(--color-bg); aspect-ratio: 5 / 2; display: grid; place-items: center; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--color-neutral-500);">LOGO</div>
+      <div style="background: var(--color-bg); aspect-ratio: 5 / 2; display: grid; place-items: center; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--color-neutral-500);">LOGO</div>
+      <div style="background: var(--color-bg); aspect-ratio: 5 / 2; display: grid; place-items: center; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--color-neutral-500);">LOGO</div>
+      <div style="background: var(--color-bg); aspect-ratio: 5 / 2; display: grid; place-items: center; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--color-neutral-500);">LOGO</div>
+      <div style="background: var(--color-bg); aspect-ratio: 5 / 2; display: grid; place-items: center; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--color-neutral-500);">LOGO</div>
+      <div style="background: var(--color-bg); aspect-ratio: 5 / 2; display: grid; place-items: center; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--color-neutral-500);">LOGO</div>
+    </div>
+  </section>
+
+  <section data-screen-label="Oferta" style="border-top: 2px solid var(--color-divider); background: var(--color-surface);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(56px,10vw,120px) clamp(18px,5vw,48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(32px,5vw,64px);">
+      <div>
+        <h6 style="margin: 0 0 16px; color: var(--color-accent-700);">A oferta</h6>
+        <h2 style="margin: 0 0 20px; font-size: clamp(26px,6.5vw,44px); line-height: 1.05; letter-spacing: -0.025em;">Do briefing à desmontagem, com uma equipe só</h2>
+        <p style="margin: 0 0 20px; font-size: clamp(16px,4.2vw,18px); line-height: 1.6; max-width: 46ch;">Como cada projeto é sob medida, a oferta é estruturada como processo + escopo, não como tabela de preço fechada.</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; max-width: 46ch; border-left: 2px solid var(--color-accent); padding-left: 16px; color: var(--color-neutral-800);">"Orçamento não é cotação avulsa — é o início do projeto do seu estande. Por isso, entendemos seu objetivo antes de falar de valores."</p>
+      </div>
+      <div style="border: 2px solid var(--color-text); background: var(--color-bg);">
+        <ul style="list-style: none; margin: 0; padding: clamp(20px,4vw,28px); display: flex; flex-direction: column; gap: 16px;">
+          <li style="display: flex; gap: 12px; align-items: flex-start; font-size: clamp(15px,4vw,17px); line-height: 1.45;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.6" stroke-linecap="square" style="flex: none; margin-top: 2px;"><path d="M4 12l5 5L20 6"></path></svg>
+            <span>Reunião de briefing consultivo (sem custo)</span>
+          </li>
+          <li style="display: flex; gap: 12px; align-items: flex-start; font-size: clamp(15px,4vw,17px); line-height: 1.45;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.6" stroke-linecap="square" style="flex: none; margin-top: 2px;"><path d="M4 12l5 5L20 6"></path></svg>
+            <span>Projeto 3D do estande (pré-pronto ou personalizado)</span>
+          </li>
+          <li style="display: flex; gap: 12px; align-items: flex-start; font-size: clamp(15px,4vw,17px); line-height: 1.45;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.6" stroke-linecap="square" style="flex: none; margin-top: 2px;"><path d="M4 12l5 5L20 6"></path></svg>
+            <span>Montagem completa: estrutura, iluminação e som</span>
+          </li>
+          <li style="display: flex; gap: 12px; align-items: flex-start; font-size: clamp(15px,4vw,17px); line-height: 1.45;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.6" stroke-linecap="square" style="flex: none; margin-top: 2px;"><path d="M4 12l5 5L20 6"></path></svg>
+            <span>Acompanhamento técnico durante o evento</span>
+          </li>
+          <li style="display: flex; gap: 12px; align-items: flex-start; font-size: clamp(15px,4vw,17px); line-height: 1.45;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.6" stroke-linecap="square" style="flex: none; margin-top: 2px;"><path d="M4 12l5 5L20 6"></path></svg>
+            <span>Desmontagem inclusa</span>
+          </li>
+        </ul>
+        <div style="border-top: 2px solid var(--color-text); padding: clamp(20px,4vw,28px); display: flex; flex-direction: column; gap: 14px;">
+          <div>
+            <span style="display: block; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-neutral-700);">Investimento</span>
+            <span style="display: block; font-family: var(--font-heading); font-weight: 800; font-size: clamp(19px,4.6vw,24px); line-height: 1.15; letter-spacing: -0.02em;">Sob consulta, de acordo com escopo e modelo escolhido</span>
+          </div>
+          <div>
+            <span style="display: block; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-neutral-700);">Pagamento</span>
+            <span style="display: block; font-size: 16px; line-height: 1.45;">Parcelado, com última parcela quitada 1 dia antes do evento</span>
+          </div>
+          <div>
+            <span style="display: block; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-neutral-700);">Garantia</span>
+            <span style="display: block; font-size: 16px; line-height: 1.45;">Garantia contratual de prazo de entrega</span>
+          </div>
+          <a href="{{ waLink }}" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; min-height: 56px; padding: 16px 20px; font-size: 16px; justify-content: space-between; gap: 16px; margin-top: 6px;">
+            <span>{{ ctaLabel }}</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Objeções" style="max-width: 1160px; margin: 0 auto; padding: clamp(56px,10vw,120px) clamp(18px,5vw,48px);">
+    <h6 style="margin: 0 0 16px; color: var(--color-accent-700);">Antes que você pergunte</h6>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(28px,4vw,48px); margin-top: clamp(24px,4vw,40px);">
+      <div style="border-top: 2px solid var(--color-text); padding-top: 18px;">
+        <h3 style="margin: 0 0 12px; font-size: clamp(19px,4.6vw,24px); letter-spacing: -0.02em;">"Eu só quero um orçamento pra comparar preços."</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6;">Sem problema em pesquisar — é o mais responsável a se fazer. Mas um estande não é commodity: o mesmo metro quadrado pode custar o dobro dependendo do material, da infraestrutura por trás e da experiência de quem monta. Por isso, nosso orçamento já vem com o projeto pensado pra sua marca, não só um número solto.</p>
+      </div>
+      <div style="border-top: 2px solid var(--color-text); padding-top: 18px;">
+        <h3 style="margin: 0 0 12px; font-size: clamp(19px,4.6vw,24px); letter-spacing: -0.02em;">"Achei caro."</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6;">Entendemos — e é justamente por isso que trabalhamos com dois modelos, pré-pronto e personalizado, pra você escolher o nível de investimento certo pro seu momento, sem abrir mão de qualidade nem de prazo garantido em contrato.</p>
+      </div>
+      <div style="border-top: 2px solid var(--color-text); padding-top: 18px;">
+        <h3 style="margin: 0 0 12px; font-size: clamp(19px,4.6vw,24px); letter-spacing: -0.02em;">"Já tenho um fornecedor/montador."</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6;">Ótimo que você já valoriza ter um parceiro fixo. Vale ao menos comparar: infraestrutura própria, 30 anos de histórico e garantia contratual de prazo são pontos que fazem diferença justamente quando algo foge do combinado.</p>
+      </div>
+      <div style="border-top: 2px solid var(--color-text); padding-top: 18px;">
+        <h3 style="margin: 0 0 12px; font-size: clamp(19px,4.6vw,24px); letter-spacing: -0.02em;">"Não achei muita coisa sobre a empresa online."</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.6;">Faz sentido gerar essa dúvida — e é por isso que estamos reforçando nossa presença digital com projetos reais, números e depoimentos de quem já fechou com a gente (veja a seção de resultados acima).</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Garantia" style="background: var(--color-accent); color: var(--color-bg);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(48px,9vw,104px) clamp(18px,5vw,48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(28px,5vw,56px); align-items: start;">
+      <div style="border: 2px solid var(--color-bg); padding: clamp(20px,4vw,28px); display: flex; flex-direction: column; gap: 12px; max-width: 380px;">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M8 12l3 3 5-5"></path></svg>
+        <span style="font-family: var(--font-heading); font-weight: 800; font-size: clamp(22px,5.4vw,30px); line-height: 1.05; letter-spacing: -0.02em; text-transform: uppercase;">Prazo garantido em contrato</span>
+      </div>
+      <p style="margin: 0; font-size: clamp(18px,4.8vw,26px); line-height: 1.35; max-width: 40ch; font-weight: 600;">Seu prazo está protegido em contrato, não em promessa. Se a entrega atrasar por responsabilidade da Quality, o contrato já prevê desconto proporcional — por escrito, assinado em duas vias, antes de qualquer montagem começar.</p>
+    </div>
+  </section>
+
+  <sc-if value="{{ mostrarUrgencia }}" hint-placeholder-val="{{ false }}">
+    <section style="border-bottom: 2px solid var(--color-divider);">
+      <div style="max-width: 1160px; margin: 0 auto; padding: clamp(32px,6vw,56px) clamp(18px,5vw,48px);">
+        <p style="margin: 0; font-size: clamp(17px,4.4vw,22px); line-height: 1.4; max-width: 52ch; font-weight: 600; border-left: 2px solid var(--color-accent); padding-left: 20px;">Nossa agenda de montagem segue o calendário de feiras — projetos personalizados têm prazo mínimo de produção, então quanto antes você reservar, mais cedo garante sua data.</p>
+      </div>
+    </section>
+  </sc-if>
+
+  <section data-screen-label="FAQ" style="max-width: 1160px; margin: 0 auto; padding: clamp(56px,10vw,120px) clamp(18px,5vw,48px);">
+    <h6 style="margin: 0 0 16px; color: var(--color-accent-700);">Perguntas frequentes</h6>
+    <h2 style="margin: 0 0 clamp(24px,4vw,40px); font-size: clamp(26px,6.5vw,44px); line-height: 1.05; letter-spacing: -0.025em;">FAQ</h2>
+    <div style="border-top: 2px solid var(--color-divider); max-width: 860px;">
+      <details style="border-bottom: 2px solid var(--color-divider);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: clamp(16px,4vw,22px) 0; min-height: 56px; font-family: var(--font-heading); font-weight: 800; font-size: clamp(16px,4.2vw,20px); letter-spacing: -0.01em;">
+          <span>Preciso já saber exatamente o que quero de estande?</span>
+          <span class="faq-plus" style="flex: none; color: var(--color-accent); font-size: 24px; line-height: 1; transition: transform 0.18s ease;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 0 clamp(18px,4vw,24px); font-size: 16px; line-height: 1.6; max-width: 62ch;">Não. A maioria dos nossos clientes chega sabendo só a imagem que quer passar — nossa equipe de arquitetos e designers traduz isso em projeto técnico.</p>
+      </details>
+      <details style="border-bottom: 2px solid var(--color-divider);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: clamp(16px,4vw,22px) 0; min-height: 56px; font-family: var(--font-heading); font-weight: 800; font-size: clamp(16px,4.2vw,20px); letter-spacing: -0.01em;">
+          <span>Qual a diferença entre o estande pré-pronto e o personalizado?</span>
+          <span class="faq-plus" style="flex: none; color: var(--color-accent); font-size: 24px; line-height: 1; transition: transform 0.18s ease;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 0 clamp(18px,4vw,24px); font-size: 16px; line-height: 1.6; max-width: 62ch;">O pré-pronto usa estrutura já testada, com mais agilidade e previsibilidade de custo. O personalizado é desenhado do zero pra sua marca, com liberdade total de projeto.</p>
+      </details>
+      <details style="border-bottom: 2px solid var(--color-divider);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: clamp(16px,4vw,22px) 0; min-height: 56px; font-family: var(--font-heading); font-weight: 800; font-size: clamp(16px,4.2vw,20px); letter-spacing: -0.01em;">
+          <span>E se a montagem atrasar?</span>
+          <span class="faq-plus" style="flex: none; color: var(--color-accent); font-size: 24px; line-height: 1; transition: transform 0.18s ease;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 0 clamp(18px,4vw,24px); font-size: 16px; line-height: 1.6; max-width: 62ch;">O contrato prevê desconto proporcional em caso de atraso por parte da Quality — não é promessa verbal, é cláusula assinada.</p>
+      </details>
+      <details style="border-bottom: 2px solid var(--color-divider);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: clamp(16px,4vw,22px) 0; min-height: 56px; font-family: var(--font-heading); font-weight: 800; font-size: clamp(16px,4.2vw,20px); letter-spacing: -0.01em;">
+          <span>Como funciona a entrega no dia do evento?</span>
+          <span class="faq-plus" style="flex: none; color: var(--color-accent); font-size: 24px; line-height: 1; transition: transform 0.18s ease;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 0 clamp(18px,4vw,24px); font-size: 16px; line-height: 1.6; max-width: 62ch;">Nossa equipe acompanha o estande durante o evento, cobrindo qualquer ajuste técnico de última hora — você não fica sozinho no dia.</p>
+      </details>
+      <details style="border-bottom: 2px solid var(--color-divider);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: clamp(16px,4vw,22px) 0; min-height: 56px; font-family: var(--font-heading); font-weight: 800; font-size: clamp(16px,4.2vw,20px); letter-spacing: -0.01em;">
+          <span>Quais as formas de pagamento?</span>
+          <span class="faq-plus" style="flex: none; color: var(--color-accent); font-size: 24px; line-height: 1; transition: transform 0.18s ease;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 0 clamp(18px,4vw,24px); font-size: 16px; line-height: 1.6; max-width: 62ch;">Pagamento parcelado, com a última parcela quitada um dia antes do evento.</p>
+      </details>
+      <details style="border-bottom: 2px solid var(--color-divider);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: clamp(16px,4vw,22px) 0; min-height: 56px; font-family: var(--font-heading); font-weight: 800; font-size: clamp(16px,4.2vw,20px); letter-spacing: -0.01em;">
+          <span>Vocês atendem qualquer tamanho de feira/evento?</span>
+          <span class="faq-plus" style="flex: none; color: var(--color-accent); font-size: 24px; line-height: 1; transition: transform 0.18s ease;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 0 clamp(18px,4vw,24px); font-size: 16px; line-height: 1.6; max-width: 62ch;">Sim — trabalhamos tanto com projetos pontuais quanto com marcas que participam de múltiplas feiras ao longo do ano.</p>
+      </details>
+      <details style="border-bottom: 2px solid var(--color-divider);">
+        <summary style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: clamp(16px,4vw,22px) 0; min-height: 56px; font-family: var(--font-heading); font-weight: 800; font-size: clamp(16px,4.2vw,20px); letter-spacing: -0.01em;">
+          <span>Como começo o processo?</span>
+          <span class="faq-plus" style="flex: none; color: var(--color-accent); font-size: 24px; line-height: 1; transition: transform 0.18s ease;">+</span>
+        </summary>
+        <p style="margin: 0; padding: 0 0 clamp(18px,4vw,24px); font-size: 16px; line-height: 1.6; max-width: 62ch;">Uma reunião de briefing consultivo, sem custo, pra entender seu objetivo antes de falar de valores e formato.</p>
+      </details>
+    </div>
+  </section>
+
+  <section data-screen-label="CTA final" style="position: relative; background: #16110f; color: #f8f4f4; overflow: hidden;">
+    <div style="position: absolute; inset: 0;">
+      <img src="assets/estande-05.png" alt="" class="grayscale" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.32;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22,17,15,0.9) 0%, rgba(22,17,15,0.82) 100%);"></div>
+    </div>
+    <div style="position: relative; max-width: 1160px; margin: 0 auto; padding: clamp(56px,10vw,120px) clamp(18px,5vw,48px); display: flex; flex-direction: column; gap: clamp(20px,4vw,32px); align-items: flex-start;">
+      <h2 style="margin: 0; font-size: clamp(27px,7vw,54px); line-height: 1.05; letter-spacing: -0.03em; max-width: 26ch; text-wrap: pretty;">Daqui a alguns meses, sua marca vai estar num corredor cheio de estandes parecidos. A pergunta é: o seu vai ser mais um, ou vai ser o que todo mundo lembra depois?</h2>
+      <p style="margin: 0; font-size: clamp(16px,4.2vw,19px); line-height: 1.5; max-width: 46ch; color: #d7d3d3;">30 anos entregando estandes que representam o tamanho real de quem os contrata — no prazo combinado, em contrato.</p>
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-start; width: 100%; max-width: 420px;">
+        <a href="{{ waLink }}" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%; min-height: 60px; padding: 18px 22px; font-size: clamp(15px,4vw,18px); justify-content: space-between; gap: 16px;">
+          <span>{{ ctaLabel }}</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"></path></svg>
+        </a>
+        <span style="font-size: 13px; letter-spacing: 0.04em; color: #bab6b6;">{{ ctaMicro }}</span>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: var(--color-bg); border-top: 2px solid var(--color-accent);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: clamp(40px,8vw,88px) clamp(18px,5vw,48px) clamp(28px,5vw,48px);">
+      <p style="margin: 0 0 clamp(36px,6vw,64px); font-size: clamp(16px,4.2vw,19px); line-height: 1.6; max-width: 66ch; border-left: 2px solid var(--color-accent); padding-left: 20px;"><strong style="font-family: var(--font-heading); font-weight: 800;">PS:</strong> Um estande genérico custa praticamente o mesmo trabalho de organizar que um estande que impressiona — a diferença é quem está por trás da execução. Com infraestrutura própria e 30 anos de mercado, a Quality Produções garante em contrato o que a maioria promete só de boca. Fale com a gente antes de fechar sua próxima feira.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: clamp(28px,4vw,48px); padding-bottom: clamp(28px,5vw,48px); border-bottom: 2px solid var(--color-divider);">
+        <div style="display: flex; flex-direction: column; gap: 18px; align-items: flex-start;">
+          <img src="assets/logo-quality.png" alt="Quality Produções — 30 anos" style="height: 40px; width: auto;">
+          <a href="{{ waLink }}" target="_blank" rel="noopener" class="btn btn-primary" style="min-height: 52px; padding: 15px 20px; font-size: 15px; gap: 10px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 20l1.5-4A8 8 0 1 1 9 19.5z"></path></svg>
+            <span>Falar no WhatsApp</span>
+          </a>
+        </div>
+        <div>
+          <h6 style="margin: 0 0 12px;">Nossa produtora</h6>
+          <p style="margin: 0 0 6px; font-size: 15px; line-height: 1.5;">INCRA 07 Brazlândia, Brasília — 72773-010</p>
+          <p style="margin: 0 0 6px; font-size: 15px;"><a href="tel:+5561999448143">(61) 9 9944-8143</a></p>
+          <p style="margin: 0; font-size: 15px;"><a href="tel:+5561999628777">(61) 9 9962-8777</a></p>
+        </div>
+        <div>
+          <h6 style="margin: 0 0 12px;">Horário de funcionamento</h6>
+          <p style="margin: 0 0 6px; font-size: 15px;">Segunda – Sexta: 09h00 às 18h00</p>
+          <p style="margin: 0 0 16px; font-size: 15px;">Sábado: 08h00 às 12h00</p>
+          <p style="margin: 0; font-size: 15px;"><a href="https://www.instagram.com/qualityproducoes/" target="_blank" rel="noopener">@qualityproducoes</a></p>
+        </div>
+      </div>
+
+      <p style="margin: clamp(20px,4vw,28px) 0 0; font-size: 12px; letter-spacing: 0.04em; color: var(--color-neutral-700);">© Quality Produções · Montagem de estandes e cenografia para feiras e eventos corporativos · 30 anos</p>
+    </div>
+  </footer>
+
+  <a href="{{ waLink }}" target="_blank" rel="noopener" aria-label="Falar no WhatsApp" style="position: fixed; right: 16px; bottom: 16px; z-index: 30; width: 60px; height: 60px; display: grid; place-items: center; background: var(--color-accent); color: var(--color-bg); box-shadow: var(--shadow-lg); text-decoration: none;" style-hover="background: var(--color-accent-600);">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 20l1.5-4A8 8 0 1 1 9 19.5z"></path></svg>
+  </a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;headlineVariante&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;A — imponência&quot;, &quot;B — autoridade&quot;, &quot;C — dor&quot;], &quot;default&quot;: &quot;A — imponência&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Campanha&quot;},
+  &quot;ctaVariante&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Quero Meu Orçamento&quot;, &quot;Reservar Minha Data&quot;], &quot;default&quot;: &quot;Quero Meu Orçamento&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Campanha&quot;},
+  &quot;mostrarUrgencia&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Campanha&quot;},
+  &quot;whatsapp&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;5561999448143&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contato&quot;}
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const fone = (this.props.whatsapp ?? "5561999448143").replace(/\D/g, "");
+    const heads = {
+      "A — imponência": "O Estande Que Faz Sua Marca Parecer Gigante",
+      "B — autoridade": "30 Anos Entregando Estandes No Prazo Certo",
+      "C — dor": "Chega De Estande Que Não Impressiona Ninguém"
+    };
+    const variante = this.props.headlineVariante ?? "A — imponência";
+    const ctaVar = this.props.ctaVariante ?? "Quero Meu Orçamento";
+    const msg = encodeURIComponent("Olá! Vim pela página da Quality Produções e quero um orçamento de estande.");
+    return {
+      waLink: "https://wa.me/" + fone + "?text=" + msg,
+      headline: heads[variante] || heads["A — imponência"],
+      ctaLabel: ctaVar,
+      ctaMicro: ctaVar === "Reservar Minha Data"
+        ? "Agenda por temporada de feiras • Resposta em até 1 dia útil"
+        : "Atendimento consultivo • Sem compromisso",
+      mostrarUrgencia: this.props.mostrarUrgencia ?? false
+    };
+  }
+}
+</script>
+</body>
+</html>
